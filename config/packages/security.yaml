@@ -24,14 +24,15 @@ security:
             
             form_login:
                 check_path: login
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
             
                
             logout:
                 path: /logout
                 target: /
-            guard:
-                authenticators:
-                    - App\Security\LoginFormAuthenticator
+            
             #http_basic: 
                        
 
