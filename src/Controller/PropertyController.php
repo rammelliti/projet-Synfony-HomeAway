@@ -31,7 +31,6 @@ class PropertyController extends AbstractController
         $this->repository = $repository;
     }
 
-
     /**
      * @Route("/biens", name="property.index")
      * @return Response
