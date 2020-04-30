@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 class AdminOptionController extends AbstractController
 {
    /**
-     * @Route("/", name="admin.option.index", methods={"GET"})
+     * @Route("/admin/option", name="admin.option.index", methods={"GET"})
      */
     public function index(OptionRepository $optionRepository): Response
     {
@@ -23,7 +23,7 @@ class AdminOptionController extends AbstractController
         ]);
     }
      /**
-     * @Route("/new", name="admin.option.new", methods={"GET","POST"})
+     * @Route("/admin/option/new", name="admin.option.new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -46,7 +46,7 @@ class AdminOptionController extends AbstractController
     }
 
      /**
-     * @Route("/{id}/edit", name="admin.option.edit", methods={"GET","POST"})
+     * @Route("/admin/option/{id}/edit", name="admin.option.edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Option $option): Response
     {
@@ -66,7 +66,7 @@ class AdminOptionController extends AbstractController
     }
 
    /**
-    * @Route("/{id}", name="admin.option.delete", methods="DELETE")
+    * @Route("/admin/option/{id}", name="admin.option.delete", methods="DELETE")
     */
     public function delete(Option $option, Request $request)
     {

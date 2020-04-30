@@ -11,6 +11,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface,\Serializable
 {
+    
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -24,7 +25,7 @@ class User implements UserInterface,\Serializable
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=false)
      */
     private $password;
 
