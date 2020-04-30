@@ -37,6 +37,7 @@ class PropertyController extends AbstractController
      * @return Response
      */
     public function index(PaginatorInterface $paginator, Request $request) : Response
+
     {
 
         $search = new PropertySearch();
