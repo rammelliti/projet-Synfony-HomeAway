@@ -16,7 +16,7 @@ class AdminOptionController extends AbstractController
    /**
      * @Route("/admin/option", name="admin.option.index", methods={"GET"})
      */
-    public function index(OptionRepository $optionRepository): Response
+    public function index(OptionRepository $optionRepository): Response 
     {
         return $this->render('admin/option/index.html.twig', [
             'options' => $optionRepository->findAll(),
