@@ -1,0 +1,96 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <title> </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        #outlook a {
+            padding: 0;
+        }
+        .ReadMsgBody {
+            width: 100%;
+        }
+        .ExternalClass {
+            width: 100%;
+        }
+        .ExternalClass * {
+            line-height: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table,
+        td {
+            border-collapse: collapse;
+
+        }
+        p {
+            display: block;
+            margin: 13px 0;
+        }
+    </style>
+    <!--[if !mso]><!-->
+    <style type="text/css">
+        @media only screen and (max-width:480px) {
+            @-ms-viewport {
+                width: 320px;
+            }
+            @viewport {
+                width: 320px;
+            }
+        }
+    </style>
+    <style type="text/css">
+        @media only screen and (min-width:480px) {
+            .mj-column-per-100 {
+                width: 100% !important;
+                max-width: 100%;
+            }
+        }
+    </style>
+    <style type="text/css">
+        @media only screen and (max-width:480px) {
+            table.full-width-mobile {
+                width: 100% !important;
+            }
+            td.full-width-mobile {
+                width: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Demande de contact</h1>
+<p>
+    Une personne souhaiterait avoir des renseignements à propos de ce bien =>
+    <a href="{{ url('property.show', {id: contact.property.id, slug: contact.property.slug }) }}">{{ contact.property.title }}</a>
+</p>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+    <tbody>
+    <tr>
+        <td>Titre du bien : {{ contact.property.title }}</td>
+    </tr>
+    <tr>
+        <td>Prénom : {{ contact.firstname }}</td>
+    </tr>
+    <tr>
+        <td>Nom : {{ contact.lastname }}</td>
+    </tr>
+    <tr>
+        <td>Téléphone : {{ contact.phone }}</td>
+    </tr>
+    <tr>
+        <td>Email : {{ contact.email }}</td>
+    </tr>
+    <tr>
+        <td>Message : {{ contact.message | nl2br }}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
